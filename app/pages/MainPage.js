@@ -7,6 +7,8 @@ import {
 } from 'react-native';
 
 import TabNavigator from "react-native-tab-navigator";
+
+import ClassIfyPage from './classIfy/ClassIfyPage'
 import CartPage from './cart/CartPage';
 
 export default class MainPage extends Component {
@@ -57,7 +59,7 @@ export default class MainPage extends Component {
 						renderIcon={() => <Image source={require('../images/icon-fenlei.png')} style={styles.icon}/>}
 						renderSelectedIcon={() => <Image source={require('../images/icon-fenlei-active.png')} style={styles.icon}/>}
 					>
-						<Text>hi</Text>
+                        <ClassIfyPage></ClassIfyPage>
 					</TabNavigator.Item>
 					
 					<TabNavigator.Item

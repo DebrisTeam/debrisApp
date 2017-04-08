@@ -4,4 +4,4 @@
  * @flow
  */
 
-import './app/root';
+import './app/root'
