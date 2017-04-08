@@ -7,7 +7,9 @@ import {
 } from 'react-native';
 
 import TabNavigator from "react-native-tab-navigator";
+import HomePage from './home/HomePage';
 import CartPage from './cart/CartPage';
+import MinePage from './mine/MinePage';
 
 export default class MainPage extends Component {
 	constructor(props) {
@@ -45,7 +47,7 @@ export default class MainPage extends Component {
 						renderIcon={() => <Image source={require('../images/icon-home.png')} style={styles.icon}/>}
 						renderSelectedIcon={() => <Image source={require('../images/icon-home-active.png')} style={styles.icon}/>}
 					>
-						<Text>hi enjing</Text>
+						<HomePage {...this.props}/>
 					</TabNavigator.Item>
 					
 					<TabNavigator.Item
@@ -81,7 +83,7 @@ export default class MainPage extends Component {
 						renderIcon={() => <Image source={require('../images/icon-my.png')} style={styles.icon}/>}
 						renderSelectedIcon={() => <Image source={require('../images/icon-my-active.png')} style={styles.icon}/>}
 					>
-						<Text>hi enjing</Text>
+						<MinePage {...this.props}/>
 					</TabNavigator.Item>
 				</TabNavigator>
 			</View>
