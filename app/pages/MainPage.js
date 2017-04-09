@@ -128,6 +128,6 @@ const styles = StyleSheet.create({
 		color: '#333',
 	},
 	selectedTitleStyle: {
-		color: '#23bb08'
+		color: 'rgba(71,157,103,1)'
 	}
 })
