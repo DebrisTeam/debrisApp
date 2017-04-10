@@ -9,7 +9,26 @@ import {
 } from 'react-native';
 
 export default class GoodsCategory extends Component {
+	constructor(props) {
+		super(props);
+		
+	}
+	
 	render() {
+		let { data } = this.props;
+		let randerItem = data.goods.map((item, index) => {
+			return (
+				<View style={sortStyles.sortGoodsItem} key={index}>
+					<Image source={{uri: item.uri}} style={sortStyles.thumb}/>
+					<View style={sortStyles.itemTextContainer}>
+						<Text 
+							numberOfLines={2}
+							style={sortStyles.itemTitle}>{ item.title }</Text>
+						<Text style={sortStyles.itemPrice}>￥{ item.price }/<Text style={{fontSize: 10}}>{ item.unit }</Text></Text>
+					</View>
+				</View>
+			);
+		});
 		return (
 			<View style={sortStyles.container}>
 				<Text style={sortStyles.sortTitle}>生鲜系列</Text>
@@ -20,21 +39,7 @@ export default class GoodsCategory extends Component {
 					showsHorizontalScrollIndicator={false}
 					contentContainerStyle={{paddingHorizontal: 5,marginVertical: 10}}
 				>
-					<View style={sortStyles.sortGoodsItem}>
-						<Image source={{uri: 'https://img.yzcdn.cn/upload_files/2016/12/30/Fpfthm6gKtnHgrEuHvYNVt0qlaXm.jpg?imageView2/2/w/280/h/280/q/75/format/webp'}} style={sortStyles.thumb}/>
-					</View>
-					<View style={sortStyles.sortGoodsItem}>
-						<Image source={{uri: 'https://img.yzcdn.cn/upload_files/2016/12/30/FufzM760_r2j8iiSHC9irUlvQIN5.jpg?imageView2/2/w/280/h/280/q/75/format/webp'}} style={sortStyles.thumb}/>
-					</View>
-					<View style={sortStyles.sortGoodsItem}>
-						<Image source={{uri: 'https://img.yzcdn.cn/upload_files/2016/12/31/Fr-_lyQemNUO51P5nWn6Eh4wm4Bf.jpg?imageView2/2/w/280/h/280/q/75/format/webp'}} style={sortStyles.thumb}/>
-					</View>
-					<View style={sortStyles.sortGoodsItem}>
-						<Image source={{uri: 'https://img.yzcdn.cn/upload_files/2016/12/31/FjrPeB6eV_QOx3XXUOOjJQtviRO3.jpg?imageView2/2/w/280/h/280/q/75/format/webp'}} style={sortStyles.thumb}/>
-					</View>
-					<View style={sortStyles.sortGoodsItem}>
-						<Image source={{uri: 'https://img.yzcdn.cn/upload_files/2016/12/30/FueHbnSJTErGZ5izk0ucfdX4xOVz.jpg?imageView2/2/w/280/h/280/q/75/format/webp'}} style={sortStyles.thumb}/>
-					</View>
+					{ randerItem }
 				</ScrollView>
 			</View>
 		);
@@ -45,7 +50,7 @@ const sortGoodsItemWidth = Dimensions.get('window').width/3 - 16;
 
 const sortStyles = StyleSheet.create({
 	container: {
-		marginTop: 15,
+		marginTop: 10,
 		paddingVertical: 10,
 		backgroundColor: '#fff',
 	},
@@ -69,5 +74,19 @@ const sortStyles = StyleSheet.create({
 	thumb: {
 		width: sortGoodsItemWidth,
 		height: sortGoodsItemWidth,
-	}
+	},
+	itemTextContainer: {
+		width: sortGoodsItemWidth
+	},
+	itemTitle: {
+		height: 40,
+		fontSize: 12,
+		lineHeight: 20,
+		color: '#333'
+	},
+	itemPrice: {
+		color: 'red',
+		fontSize: 14,
+		//textAlign: 'center'
+	},
 })

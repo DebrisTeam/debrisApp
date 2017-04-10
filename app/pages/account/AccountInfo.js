@@ -9,7 +9,10 @@ import { List, ListItem, Icon, Button} from 'react-native-elements';
 
 export default class AccountInfo extends Component {
 	static navigationOptions = {
-		title: '账号信息'
+		title: '账号信息',
+		header: {
+			
+		}
 	}
 	render() {
 		const { navigate, goBack } = this.props.navigation;
