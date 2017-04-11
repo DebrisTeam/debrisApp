@@ -1,5 +1,5 @@
 /**
- * Created by wangdi on 5/11/16.
+ * 处理跨平台px单位计算
  */
 'use strict';
 

@@ -7,7 +7,8 @@ import React, {Component} from 'react';
 import {Text, View, StyleSheet, Platform, ToastAndroid} from 'react-native';
 import theme from './../../config/theme';
 import ScrollableTabView from 'react-native-scrollable-tab-view';
-import HomeTab from './HomeTab';
+import ClassIfyTab from './Tab/ClassIfyTab';
+import CustomTabBar from './Tab/CustomTabBar';
 import RCTDeviceEventEmitter from 'RCTDeviceEventEmitter';
 
 export default class HomeFragment extends Component{
@@ -23,14 +24,15 @@ export default class HomeFragment extends Component{
         return(
             <View style={styles.container}>
                     <ScrollableTabView
+                        renderTabBar={() => <CustomTabBar />}
                         tabBarBackgroundColor="rgb(22,131,251)"
-                        tabBarActiveTextColor="white"
-                        tabBarInactiveTextColor="rgba(255,255,255,0.5)"
+                        tabBarActiveTextColor="#479d67"
+                        tabBarInactiveTextColor="#000"
                         tabBarTextStyle={{fontSize: theme.scrollView.fontSize}}
                         tabBarUnderlineStyle={theme.scrollView.underlineStyle}>
                         {this.state.tabNames.map((item, i) => {
                             return(
-                                <HomeTab tabLabel={item} key={i} tabTag={item}/>
+                                <ClassIfyTab tabLabel={item} key={i} tabTag={item}/>
                             );})
                         }
                     </ScrollableTabView>
@@ -38,8 +40,8 @@ export default class HomeFragment extends Component{
         );
     }
 
-
     componentDidMount(){
+        console.log(RCTDeviceEventEmitter.addListener('valueChange', this._handleTabNames))
         RCTDeviceEventEmitter.addListener('valueChange', this._handleTabNames);
     }
 

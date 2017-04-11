@@ -5,8 +5,9 @@
 
 import React, {Component} from 'react';
 import {Text, StyleSheet, View, ScrollView, RefreshControl} from 'react-native';
-import computeTime from './../../util/computeTime';
-import theme from '../../config/theme';
+import ListViewForOtherTab from '../Tab/SimpleListView';
+import computeTime from './../../../utils/computeTime';
+import theme from '../../../config/theme';
 
 export default class HomeTab extends Component {
     constructor(props) {
@@ -36,8 +37,19 @@ export default class HomeTab extends Component {
                         titleColor={theme.themeColor}
                     />
                 }>
+                 { this._renderContents() }
             </ScrollView>
         );
+    }
+    // 选项卡视图
+    _renderContents() {
+        if (!this.state.refreshing || this.state.loadedData) {
+            return (
+                <View>
+                        <ListViewForOtherTab contents={this.state.dataBlob}/>
+                </View>
+            );
+        }
     }
 
     _onRefresh() {
@@ -80,7 +92,7 @@ export default class HomeTab extends Component {
                     }
                     dataBlob.push(info);
                 }
-
+                console.log(dataBlob)
                 if(dataBlob.length !== 0) {
                     this.setState({
                         dataBlob: dataBlob,
