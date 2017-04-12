@@ -41,7 +41,6 @@ export default class HomeFragment extends Component{
     }
 
     componentDidMount(){
-        console.log(RCTDeviceEventEmitter.addListener('valueChange', this._handleTabNames))
         RCTDeviceEventEmitter.addListener('valueChange', this._handleTabNames);
     }
 

@@ -4,7 +4,7 @@
 'use strict';
 
 import {PixelRatio, Dimensions, Platform} from 'react-native';
-import px2dp from '../util/px2dp';
+import px2dp from '../utils/px2dp';
 
 const globalTextColor = '#000';
 

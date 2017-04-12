@@ -1,9 +1,16 @@
 import MainPage from './MainPage';
+import OrderListPage from './me/OrderListPage'
 
 import { StackNavigator } from 'react-navigation';
 
 const App = StackNavigator({
-	MainPage: { screen: MainPage },
+    MainPage: { screen: MainPage },
+    Chat: {
+        screen: OrderListPage,
+        navigationOptions:{
+            title: '我的订单'
+        }
+    },
 },{
 	navigationOptions: {
 //		header: {
