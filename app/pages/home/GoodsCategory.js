@@ -31,8 +31,8 @@ export default class GoodsCategory extends Component {
 		});
 		return (
 			<View style={sortStyles.container}>
-				<Text style={sortStyles.sortTitle}>生鲜系列</Text>
-				<Text style={sortStyles.sortDer}>生态/健康/美味</Text>
+				<Text style={sortStyles.sortTitle}>{data.title}</Text>
+				<Text style={sortStyles.sortDer}>{data.subTitle}</Text>
 				<ScrollView
 					horizontal={true}
 					pagingEnabled={false}
