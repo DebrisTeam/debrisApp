@@ -18,11 +18,12 @@ const App = StackNavigator({
 	navigationOptions: {
 		header: {
 			style: {
+				height: 52,
 				borderWidth: 0,
-				//backgroundColor: 'rgba(71,157,103,1)'
+				backgroundColor: 'rgba(71,157,103,1)'
 			},
-			//titleStyle: {fontWeight: 'normal',color: '#fff'},
-			//tintColor: '#fff',
+			titleStyle: {fontWeight: 'normal',color: '#fff'},
+			tintColor: '#fff',
 			cardStack: {}
 		},
 	},
