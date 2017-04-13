@@ -5,7 +5,7 @@ import { StackNavigator } from 'react-navigation';
 
 const App = StackNavigator({
     MainPage: { screen: MainPage },
-    Chat: {
+    Order: {
         screen: OrderListPage,
         navigationOptions:{
             title: '我的订单',

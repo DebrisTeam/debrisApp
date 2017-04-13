@@ -34,10 +34,11 @@ export default class SettingPage extends Component{
     _alert(){
 
     }
+    // 跳转
      _onPressCallback(position){
        switch(position){
            case 0:  //title
-               this.props.navigate('Chat');
+               this.props.navigate('Order');
                break;
 
            case 1:  // add occupation

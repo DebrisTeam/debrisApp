@@ -18,7 +18,7 @@ export default class HomeFragment extends Component{
     constructor(props){
         super(props);
         this.state = {
-            tabNames: ['首页','Android','iOS']
+            tabNames: ['全部','海鲜','家禽','笋']
         };
     }
 
@@ -34,7 +34,7 @@ export default class HomeFragment extends Component{
                         tabBarUnderlineStyle={theme.scrollView.underlineStyle}>
                         {this.state.tabNames.map((item, i) => {
                             return(
-                                <ClassIfyTab tabLabel={item} key={i} tabTag={item}/>
+                                <ClassIfyTab tabLabel={item} key={i} tabTag={this.state.tabNames}/>
                             );})
                         }
                     </ScrollableTabView>

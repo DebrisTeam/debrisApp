@@ -18,7 +18,7 @@ import ReactNative, {
 import px2dp from './../../../utils/px2dp';
 import theme from '../../../style/theme';
 
-export default class SimpleListView extends Component{
+export default class ClassIfyListView extends Component{
     static propTypes = {
         isRenderHeader: PropTypes.bool
     }

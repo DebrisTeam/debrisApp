@@ -5,7 +5,7 @@
 
 import React, {Component} from 'react';
 import {Text, StyleSheet, View, ScrollView, RefreshControl} from 'react-native';
-import ListViewForOtherTab from '../Tab/SimpleListView';
+import ClassIfyListView from '../Tab/ClassIfyListView';
 import computeTime from './../../../utils/computeTime';
 import theme from '../../../style/theme';
 
@@ -15,7 +15,9 @@ export default class HomeTab extends Component {
         this.state = {
             refreshing: true,
             loadedData: false,
-            dataBlob: []
+            dataBlob: [],
+            tabLabel:this.props.tabLabel,
+            tabNames:this.props.tabTag
         };
     }
 
@@ -43,12 +45,41 @@ export default class HomeTab extends Component {
     }
     // 选项卡视图
     _renderContents() {
+        let caeNane = this.state.tabNames;
         if (!this.state.refreshing || this.state.loadedData) {
-            return (
-                <View>
-                        <ListViewForOtherTab contents={this.state.dataBlob}/>
-                </View>
-            );
+            switch(this.state.tabLabel){
+                case caeNane[0]:
+                    return (
+                        <View>
+                            <ClassIfyListView contents={this.state.dataBlob}/>
+                        </View>
+                    );
+                    break;
+
+                case caeNane[1]:
+                    return (
+                        <View>
+                            <Text>海鲜</Text>
+                        </View>
+                    );
+                    break;
+
+                case caeNane[2]:
+                   return (
+                        <View>
+                            <Text>家禽</Text>
+                        </View>
+                    );
+                    break;
+
+                case caeNane[3]:
+                    return (
+                        <View>
+                            <Text>笋</Text>
+                        </View>
+                    );
+                    break;
+            }
         }
     }
 
