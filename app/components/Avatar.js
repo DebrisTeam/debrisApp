@@ -1,5 +1,5 @@
 /**
- * Created by wangdi on 4/11/16.
+ * 图片组件。
  */
 import React, {Component, PropTypes} from "react";
 import {View, Image, Text} from "react-native";

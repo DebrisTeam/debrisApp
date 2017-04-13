@@ -4,12 +4,15 @@
 'use strict';
 
 import React, {Component} from 'react';
-import {Text, View, StyleSheet, Platform, ToastAndroid} from 'react-native';
-import theme from './../../config/theme';
+import {
+    Text,
+    View,
+    StyleSheet
+} from 'react-native';
+import theme from '../../style/theme';
 import ScrollableTabView from 'react-native-scrollable-tab-view';
 import ClassIfyTab from './Tab/ClassIfyTab';
-import CustomTabBar from './Tab/CustomTabBar';
-import RCTDeviceEventEmitter from 'RCTDeviceEventEmitter';
+import CustomTabBar from './../../components/CustomTabBar';
 
 export default class HomeFragment extends Component{
     constructor(props){
@@ -17,7 +20,6 @@ export default class HomeFragment extends Component{
         this.state = {
             tabNames: ['首页','Android','iOS']
         };
-        this._handleTabNames = this._handleTabNames.bind(this);
     }
 
     render(){
@@ -40,17 +42,6 @@ export default class HomeFragment extends Component{
         );
     }
 
-    componentDidMount(){
-        RCTDeviceEventEmitter.addListener('valueChange', this._handleTabNames);
-    }
-
-    componentWillUnmount(){
-        RCTDeviceEventEmitter.removeListener('value', this._handleTabNames);
-    }
-
-    _handleTabNames(tabNames){
-        this.setState({ tabNames: tabNames });
-    }
 }
 
 const styles = StyleSheet.create({

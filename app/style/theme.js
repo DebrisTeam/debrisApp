@@ -27,7 +27,7 @@ module.exports = {
         fontSize: px2dp(15)
     },
     scrollView: {
-        fontSize: px2dp(15),
+        fontSize: px2dp(14),
         underlineStyle: {
             backgroundColor: '#479d67'
         }

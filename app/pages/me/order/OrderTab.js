@@ -5,7 +5,7 @@
 
 import React, {Component} from 'react';
 import {Text, StyleSheet, View, ScrollView, RefreshControl} from 'react-native';
-import ListViewForOtherTab from '../Tab/SimpleListView';
+import OrderListView from './OrderListView';
 import computeTime from './../../../utils/computeTime';
 import theme from '../../../style/theme';
 
@@ -46,7 +46,7 @@ export default class HomeTab extends Component {
         if (!this.state.refreshing || this.state.loadedData) {
             return (
                 <View>
-                        <ListViewForOtherTab contents={this.state.dataBlob}/>
+                        <OrderListView contents={this.state.dataBlob}/>
                 </View>
             );
         }

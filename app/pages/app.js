@@ -8,8 +8,9 @@ const App = StackNavigator({
     Chat: {
         screen: OrderListPage,
         navigationOptions:{
-            title: '我的订单'
-        }
+            title: '我的订单',
+            headerBackTitle:null
+        },
     },
 },{
 	navigationOptions: {

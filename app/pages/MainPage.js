@@ -7,7 +7,6 @@ import {
 } from 'react-native';
 
 import TabNavigator from "react-native-tab-navigator";
-
 import ClassIfyPage from './classIfy/ClassIfyPage'
 import CartPage from './cart/CartPage';
 import MeFragment from './me/MeFragment'

@@ -4,7 +4,7 @@
 import React, {Component, PropTypes} from 'react';
 import {StyleSheet, View, Text, ScrollView, TouchableNativeFeedback, TouchableOpacity, Platform, PixelRatio} from 'react-native';
 import px2dp from '../../utils/px2dp';
-import theme from '../../config/theme';
+import theme from '../../style/theme';
 import Avatar from '../../components/Avatar';
 import OrderListPage from './OrderListPage'
 

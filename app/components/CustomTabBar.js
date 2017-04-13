@@ -1,5 +1,5 @@
 /**
- * 自定义标签栏
+ * 自定义标签栏,分类TAB
  */
 const React = require('react');
 const ReactNative = require('react-native');
@@ -14,8 +14,8 @@ const {
     Platform,
     Dimensions
 } = ReactNative;
-import px2dp from './../../../utils/px2dp';
-import theme from './../../../config/theme';
+import px2dp from './../utils/px2dp';
+import theme from '../style/theme';
 
 
 const Button = (props) => {

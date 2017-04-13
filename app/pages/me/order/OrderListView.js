@@ -18,7 +18,7 @@ import ReactNative, {
 import px2dp from './../../../utils/px2dp';
 import theme from '../../../style/theme';
 
-export default class SimpleListView extends Component{
+export default class OrderListView extends Component{
     static propTypes = {
         isRenderHeader: PropTypes.bool
     }
@@ -76,23 +76,12 @@ export default class SimpleListView extends Component{
         );
     }
 
-    _renderHeader(){
-        if(this.props.isRenderHeader) {
-            return (
-                <View style={styles.header}>
-                    <Text>热门文章</Text>
-                </View>
-            );
-        }
-    }
-
     render(){
         return(
             <ListView
                 style={styles.listView}
                 dataSource={this.state.dataSource}
                 renderRow={this._renderItem.bind(this)}
-                renderHeader={this._renderHeader.bind(this)}
             />
         );
     }
