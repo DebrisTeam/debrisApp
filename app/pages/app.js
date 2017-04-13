@@ -11,9 +11,7 @@ const App = StackNavigator({
 		header: {
 			style: {
 				borderWidth: 0,
-				//shadowColor: 'red',
-				//shadowOffset: {width: 10,height: 10},
-				backgroundColor: 'rgba(71,157,103,1)'//#479D67
+				//backgroundColor: 'rgba(71,157,103,1)'
 			},
 			titleStyle: {fontWeight: 'normal',color: '#fff'},
 			//left: null,
@@ -25,3 +23,4 @@ const App = StackNavigator({
 });
 
 module.exports = App;
+//#479D67
