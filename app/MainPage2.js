@@ -5,21 +5,27 @@ import {
 	Image,
 	StyleSheet
 } from 'react-native';
+import {
+    StackNavigator,
+    } from 'react-navigation';
 
 import TabNavigator from "react-native-tab-navigator";
-import HomePage from './home/HomePage';
-import CartPage from './cart/CartPage';
-import MinePage from './mine/MinePage';
+
 import ClassIfyPage from './classIfy/ClassIfyPage'
-import MeFragment from './me/MeFragment'
+import CartPage from './cart/CartPage';
+import MeFragment from './me/MeFragment';
+import IndividualPage from './me/IndividualPage';
+const SimpleApp = StackNavigator({
+  Home: { screen: MeFragment },
+  Chat: { screen: IndividualPage },
+});
 
 export default class MainPage extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
 			selectedTab: '1'
-		};
-
+		}
 	}
 	static navigationOptions = {
 		title: ({state}) => {
@@ -38,7 +44,6 @@ export default class MainPage extends Component {
 //		}
 	}
 	render() {
-	    const {navigate} = this.props.navigation;
 		return (
 			<View style={{flex: 1}}>
 				<TabNavigator hidesTabTouch={true} >
@@ -51,7 +56,7 @@ export default class MainPage extends Component {
 						renderIcon={() => <Image source={require('../images/icon-home.png')} style={styles.icon}/>}
 						renderSelectedIcon={() => <Image source={require('../images/icon-home-active.png')} style={styles.icon}/>}
 					>
-						<HomePage {...this.props}/>
+						<Text>hi enjing</Text>
 					</TabNavigator.Item>
 					
 					<TabNavigator.Item
@@ -87,7 +92,7 @@ export default class MainPage extends Component {
 						renderIcon={() => <Image source={require('../images/icon-my.png')} style={styles.icon}/>}
 						renderSelectedIcon={() => <Image source={require('../images/icon-my-active.png')} style={styles.icon}/>}
 					>
-						{<MeFragment navigate={navigate}/>}
+						 {<SimpleApp />}
 					</TabNavigator.Item>
 				</TabNavigator>
 			</View>
@@ -132,6 +137,6 @@ const styles = StyleSheet.create({
 		color: '#333',
 	},
 	selectedTitleStyle: {
-		color: 'rgba(71,157,103,1)'
+		color: '#23bb08'
 	}
 })
