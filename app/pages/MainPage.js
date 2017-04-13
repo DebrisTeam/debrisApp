@@ -5,7 +5,7 @@ import {
 	Image,
 	StyleSheet
 } from 'react-native';
-
+import SplashScreen from 'react-native-splash-screen';
 import TabNavigator from "react-native-tab-navigator";
 import HomePage from './home/HomePage';
 import CartPage from './cart/CartPage';
@@ -36,6 +36,10 @@ export default class MainPage extends Component {
 //			}
 //			
 //		}
+	}
+	
+	componentDidMount() {
+		SplashScreen.hide();
 	}
 	render() {
 	    const {navigate} = this.props.navigation;
