@@ -45,7 +45,7 @@ export default class MainPage extends Component {
 	    const {navigate} = this.props.navigation;
 		return (
 			<View style={{flex: 1}}>
-				<TabNavigator hidesTabTouch={true} >
+				<TabNavigator hidesTabTouch={true} tabBarStyle={{alignItems: 'center'}}>
 					<TabNavigator.Item
 						title="首页"
 						selected={this.state.selectedTab === '1'}
@@ -91,7 +91,8 @@ export default class MainPage extends Component {
 						renderIcon={() => <Image source={require('../images/icon-my.png')} style={styles.icon}/>}
 						renderSelectedIcon={() => <Image source={require('../images/icon-my-active.png')} style={styles.icon}/>}
 					>
-						{<MeFragment navigate={navigate}/>}
+						
+						<MinePage {...this.props} />
 					</TabNavigator.Item>
 				</TabNavigator>
 			</View>

@@ -79,9 +79,10 @@ const sortStyles = StyleSheet.create({
 		width: sortGoodsItemWidth
 	},
 	itemTitle: {
+		marginTop: 3,
 		height: 40,
 		fontSize: 12,
-		lineHeight: 20,
+		lineHeight: 16,
 		color: '#333'
 	},
 	itemPrice: {
