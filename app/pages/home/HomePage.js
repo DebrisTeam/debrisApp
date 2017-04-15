@@ -105,7 +105,7 @@ export default class HomePage extends Component {
 		});
 		
 		let goodsCategorys = this.state.sortData.map((item, index) => {
-			return <GoodsCategory data={item} key={index}/>
+			return <GoodsCategory {...this.props} data={item} key={index}/>
 		})
 		return (
 			<ScrollView>

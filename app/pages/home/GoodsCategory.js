@@ -6,6 +6,7 @@ import {
 	ScrollView,
 	StyleSheet,
 	Dimensions,
+	TouchableOpacity,
 } from 'react-native';
 
 export default class GoodsCategory extends Component {
@@ -15,18 +16,20 @@ export default class GoodsCategory extends Component {
 	}
 	
 	render() {
-		let { data } = this.props;
+		let { data, navigation } = this.props;
 		let randerItem = data.goods.map((item, index) => {
 			return (
-				<View style={sortStyles.sortGoodsItem} key={index}>
-					<Image source={{uri: item.uri}} style={sortStyles.thumb}/>
-					<View style={sortStyles.itemTextContainer}>
-						<Text 
-							numberOfLines={2}
-							style={sortStyles.itemTitle}>{ item.title }</Text>
-						<Text style={sortStyles.itemPrice}>￥{ item.price }/<Text style={{fontSize: 10}}>{ item.unit }</Text></Text>
+				<TouchableOpacity  key={index} onPress={() => navigation.navigate('Login')}>
+					<View style={sortStyles.sortGoodsItem}>
+						<Image source={{uri: item.uri}} style={sortStyles.thumb}/>
+						<View style={sortStyles.itemTextContainer}>
+							<Text 
+								numberOfLines={2}
+								style={sortStyles.itemTitle}>{ item.title }</Text>
+							<Text style={sortStyles.itemPrice}>￥{ item.price }/<Text style={{fontSize: 10}}>{ item.unit }</Text></Text>
+						</View>
 					</View>
-				</View>
+				</TouchableOpacity>
 			);
 		});
 		return (

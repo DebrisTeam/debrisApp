@@ -2,10 +2,14 @@
 import { StackNavigator } from 'react-navigation';
 import MainPage from './MainPage';
 import AccountInfo from './account/AccountInfo';
-import OrderListPage from './me/OrderListPage'
+import OrderListPage from './me/OrderListPage';
+import Login from './login/Login';
+import Register from './login/Register';
 
 const App = StackNavigator({
 	MainPage: { screen: MainPage },
+	Login: { screen: Login },
+	Register: { screen: Register },
 	AccountInfo: { screen: AccountInfo },
 	Chat: {
         screen: OrderListPage,
@@ -30,4 +34,3 @@ const App = StackNavigator({
 });
 
 module.exports = App;
-//#479D67
