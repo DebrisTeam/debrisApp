@@ -3,8 +3,12 @@ package com.debrisapp;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+<<<<<<< HEAD
 import com.beefe.picker.PickerViewPackage;
 import com.imagepicker.ImagePickerPackage;
+=======
+import com.cboy.rn.splashscreen.SplashScreenReactPackage;
+>>>>>>> f14d995dd779eae9bdea8d31057c42c3138b0bc6
 import com.oblador.vectoricons.VectorIconsPackage;
 import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
@@ -26,8 +30,12 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
+<<<<<<< HEAD
             new PickerViewPackage(),
             new ImagePickerPackage(),
+=======
+            new SplashScreenReactPackage(),
+>>>>>>> f14d995dd779eae9bdea8d31057c42c3138b0bc6
             new VectorIconsPackage()
       );
     }

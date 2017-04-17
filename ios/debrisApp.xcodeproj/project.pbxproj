@@ -38,6 +38,7 @@
 		2D02E4C81E0B4AEC006451C7 /* libRCTWebSocket-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAD3E991DF850E9000B6D8A /* libRCTWebSocket-tvOS.a */; };
 		2D02E4C91E0B4AEC006451C7 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAD3EA31DF850E9000B6D8A /* libReact.a */; };
 		2DCD954D1E0B4F2C00145EB5 /* debrisAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* debrisAppTests.m */; };
+		33701D1FBAEB49768C6AF74A /* libSplashScreen.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F873293186640E795D3655E /* libSplashScreen.a */; };
 		4C8A4C49217D4618820EB3D3 /* Entypo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AAFE66D60D5B48BD8A559AF5 /* Entypo.ttf */; };
 		59C529BAF70649D68BF99E5F /* MaterialIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F84502CA6F2542EEB42E4FF0 /* MaterialIcons.ttf */; };
 		5C77061CBB784A6DB515DE8B /* libRCTBEEPickerManager.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E8F61F0327C4FC1B8A8485C /* libRCTBEEPickerManager.a */; };
@@ -230,6 +231,13 @@
 			remoteGlobalIDString = 5DBEB1501B18CEA900B34395;
 			remoteInfo = RNVectorIcons;
 		};
+		596381B71E9F868000A79C26 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 92157098F5934AB7BD62D987 /* SplashScreen.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3D7682761D8E76B80014119E;
+			remoteInfo = SplashScreen;
+		};
 		5E9157321DD0AC6500FF2AA8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */;
@@ -301,6 +309,7 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = debrisApp/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = debrisApp/main.m; sourceTree = "<group>"; };
 		146833FF1AC3E56700842450 /* React.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = React.xcodeproj; path = "../node_modules/react-native/React/React.xcodeproj"; sourceTree = "<group>"; };
+		1F873293186640E795D3655E /* libSplashScreen.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libSplashScreen.a; sourceTree = "<group>"; };
 		213ED2A8914F485599173993 /* Foundation.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Foundation.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Foundation.ttf"; sourceTree = "<group>"; };
 		2D02E47B1E0B4A5D006451C7 /* debrisApp-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "debrisApp-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* debrisApp-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "debrisApp-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -311,7 +320,11 @@
 		770338DCADDE4DF4B656CAA3 /* FontAwesome.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome.ttf"; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
+<<<<<<< HEAD
 		8BFB5AF9541845DF84FCEB2B /* RNImagePicker.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNImagePicker.xcodeproj; path = "../node_modules/react-native-image-picker/ios/RNImagePicker.xcodeproj"; sourceTree = "<group>"; };
+=======
+		92157098F5934AB7BD62D987 /* SplashScreen.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = SplashScreen.xcodeproj; path = "../node_modules/react-native-splash-screen/ios/SplashScreen.xcodeproj"; sourceTree = "<group>"; };
+>>>>>>> f14d995dd779eae9bdea8d31057c42c3138b0bc6
 		9A9D7D06B1794DC9BF01CD77 /* Zocial.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Zocial.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Zocial.ttf"; sourceTree = "<group>"; };
 		AAFE66D60D5B48BD8A559AF5 /* Entypo.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Entypo.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Entypo.ttf"; sourceTree = "<group>"; };
 		AD167FF3F1AF4E8AB7A22A2C /* libRNImagePicker.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNImagePicker.a; sourceTree = "<group>"; };
@@ -360,8 +373,12 @@
 				00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */,
 				139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */,
 				1CD54FF6D97949298977F0FC /* libRNVectorIcons.a in Frameworks */,
+<<<<<<< HEAD
 				0B271F617D4C4C75BACC5676 /* libRNImagePicker.a in Frameworks */,
 				5C77061CBB784A6DB515DE8B /* libRCTBEEPickerManager.a in Frameworks */,
+=======
+				33701D1FBAEB49768C6AF74A /* libSplashScreen.a in Frameworks */,
+>>>>>>> f14d995dd779eae9bdea8d31057c42c3138b0bc6
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -504,6 +521,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		5963819A1E9F867D00A79C26 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				596381B81E9F868000A79C26 /* libSplashScreen.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		5E91572E1DD0AC6500FF2AA8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -537,8 +562,12 @@
 				00C302DF1ABCB9EE00DB3ED1 /* RCTVibration.xcodeproj */,
 				139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */,
 				4BA0474151B942898F71BC07 /* RNVectorIcons.xcodeproj */,
+<<<<<<< HEAD
 				8BFB5AF9541845DF84FCEB2B /* RNImagePicker.xcodeproj */,
 				E936DEBF57534D70AF267CBB /* RCTBEEPickerManager.xcodeproj */,
+=======
+				92157098F5934AB7BD62D987 /* SplashScreen.xcodeproj */,
+>>>>>>> f14d995dd779eae9bdea8d31057c42c3138b0bc6
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -723,13 +752,12 @@
 				TargetAttributes = {
 					00E356ED1AD99517003FC87E = {
 						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = UNR4B67779;
 						TestTargetID = 13B07F861A680F5B00A75B9A;
-					};
-					13B07F861A680F5B00A75B9A = {
-						DevelopmentTeam = KNHQQL824S;
 					};
 					2D02E47A1E0B4A5D006451C7 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = UNR4B67779;
 						ProvisioningStyle = Automatic;
 					};
 					2D02E48F1E0B4A5D006451C7 = {
@@ -810,6 +838,10 @@
 				{
 					ProductGroup = 594B7DA81E9F5C9100A7DE3D /* Products */;
 					ProjectRef = 4BA0474151B942898F71BC07 /* RNVectorIcons.xcodeproj */;
+				},
+				{
+					ProductGroup = 5963819A1E9F867D00A79C26 /* Products */;
+					ProjectRef = 92157098F5934AB7BD62D987 /* SplashScreen.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -975,6 +1007,13 @@
 			fileType = archive.ar;
 			path = libRNVectorIcons.a;
 			remoteRef = 594B7DC41E9F5C9100A7DE3D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		596381B81E9F868000A79C26 /* libSplashScreen.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libSplashScreen.a;
+			remoteRef = 596381B71E9F868000A79C26 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */ = {
@@ -1180,6 +1219,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = UNR4B67779;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -1187,8 +1227,12 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
+<<<<<<< HEAD
 					"$(SRCROOT)/../node_modules/react-native-image-picker/ios",
 					"$(SRCROOT)/../node_modules/react-native-picker/ios/RCTBEEPickerManager",
+=======
+					"$(SRCROOT)/../node_modules/react-native-splash-screen/ios",
+>>>>>>> f14d995dd779eae9bdea8d31057c42c3138b0bc6
 				);
 				INFOPLIST_FILE = debrisAppTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -1197,7 +1241,10 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+<<<<<<< HEAD
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+=======
+>>>>>>> f14d995dd779eae9bdea8d31057c42c3138b0bc6
 				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
@@ -1213,11 +1260,16 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
+				DEVELOPMENT_TEAM = UNR4B67779;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
+<<<<<<< HEAD
 					"$(SRCROOT)/../node_modules/react-native-image-picker/ios",
 					"$(SRCROOT)/../node_modules/react-native-picker/ios/RCTBEEPickerManager",
+=======
+					"$(SRCROOT)/../node_modules/react-native-splash-screen/ios",
+>>>>>>> f14d995dd779eae9bdea8d31057c42c3138b0bc6
 				);
 				INFOPLIST_FILE = debrisAppTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -1226,7 +1278,10 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+<<<<<<< HEAD
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+=======
+>>>>>>> f14d995dd779eae9bdea8d31057c42c3138b0bc6
 				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
@@ -1243,12 +1298,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
-				DEVELOPMENT_TEAM = KNHQQL824S;
+				DEVELOPMENT_TEAM = "";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
+<<<<<<< HEAD
 					"$(SRCROOT)/../node_modules/react-native-image-picker/ios",
 					"$(SRCROOT)/../node_modules/react-native-picker/ios/RCTBEEPickerManager",
+=======
+					"$(SRCROOT)/../node_modules/react-native-splash-screen/ios",
+>>>>>>> f14d995dd779eae9bdea8d31057c42c3138b0bc6
 				);
 				INFOPLIST_FILE = debrisApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
@@ -1269,12 +1328,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = KNHQQL824S;
+				DEVELOPMENT_TEAM = "";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
+<<<<<<< HEAD
 					"$(SRCROOT)/../node_modules/react-native-image-picker/ios",
 					"$(SRCROOT)/../node_modules/react-native-picker/ios/RCTBEEPickerManager",
+=======
+					"$(SRCROOT)/../node_modules/react-native-splash-screen/ios",
+>>>>>>> f14d995dd779eae9bdea8d31057c42c3138b0bc6
 				);
 				INFOPLIST_FILE = debrisApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
@@ -1300,13 +1363,18 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = UNR4B67779;
 				ENABLE_TESTABILITY = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
+<<<<<<< HEAD
 					"$(SRCROOT)/../node_modules/react-native-image-picker/ios",
 					"$(SRCROOT)/../node_modules/react-native-picker/ios/RCTBEEPickerManager",
+=======
+					"$(SRCROOT)/../node_modules/react-native-splash-screen/ios",
+>>>>>>> f14d995dd779eae9bdea8d31057c42c3138b0bc6
 				);
 				INFOPLIST_FILE = "debrisApp-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1314,7 +1382,10 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+<<<<<<< HEAD
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+=======
+>>>>>>> f14d995dd779eae9bdea8d31057c42c3138b0bc6
 				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
@@ -1339,12 +1410,17 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = UNR4B67779;
 				GCC_NO_COMMON_BLOCKS = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
+<<<<<<< HEAD
 					"$(SRCROOT)/../node_modules/react-native-image-picker/ios",
 					"$(SRCROOT)/../node_modules/react-native-picker/ios/RCTBEEPickerManager",
+=======
+					"$(SRCROOT)/../node_modules/react-native-splash-screen/ios",
+>>>>>>> f14d995dd779eae9bdea8d31057c42c3138b0bc6
 				);
 				INFOPLIST_FILE = "debrisApp-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1352,7 +1428,10 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+<<<<<<< HEAD
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+=======
+>>>>>>> f14d995dd779eae9bdea8d31057c42c3138b0bc6
 				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
@@ -1383,7 +1462,10 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+<<<<<<< HEAD
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+=======
+>>>>>>> f14d995dd779eae9bdea8d31057c42c3138b0bc6
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.debrisApp-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1410,7 +1492,10 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+<<<<<<< HEAD
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+=======
+>>>>>>> f14d995dd779eae9bdea8d31057c42c3138b0bc6
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.debrisApp-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";

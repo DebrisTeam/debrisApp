@@ -21,16 +21,16 @@ export default class HomePage extends Component {
 		this.state = {
 			bannerData: [
 				{
-					goodsId: 1,
-					goodsUri: 'https://img.yzcdn.cn/upload_files/2016/12/30/FueHbnSJTErGZ5izk0ucfdX4xOVz.jpg?imageView2/2/w/980/h/980/q/75/format/webp'
+					goodsId: 2,
+					goodsUri: 'https://img.yzcdn.cn/upload_files/2016/12/30/FueHbnSJTErGZ5izk0ucfdX4xOVz.jpg'
 				},
 				{
-					goodsId: 1,
-					goodsUri: 'https://img.yzcdn.cn/upload_files/2016/12/31/FkT0byiWr7E82GZJAkC7tYazd7Sf.jpg?imageView2/2/w/980/h/980/q/75/format/webp'
+					goodsId: 3,
+					goodsUri: 'https://img.yzcdn.cn/upload_files/2016/12/31/FkT0byiWr7E82GZJAkC7tYazd7Sf.jpg'
 				},
 				{
-					goodsId: 1,
-					goodsUri: 'https://img.yzcdn.cn/upload_files/2016/12/31/FrF6i57VEX9f3BB63GGGxBkozly8.jpg?imageView2/2/w/980/h/980/q/75/format/webp'
+					goodsId: 4,
+					goodsUri: 'https://img.yzcdn.cn/upload_files/2016/12/31/FrF6i57VEX9f3BB63GGGxBkozly8.jpg'
 				},
 			],
 			
@@ -42,35 +42,35 @@ export default class HomePage extends Component {
 						{
 							goodId: 1,
 							title: '珍珠黄玉米头玉米粒  杂粮粥长寿粥珍珠黄玉米头玉米粒',
-							uri: 'https://img.yzcdn.cn/upload_files/2016/12/30/Fpfthm6gKtnHgrEuHvYNVt0qlaXm.jpg?imageView2/2/w/280/h/280/q/75/format/webp',
+							uri: 'https://img.yzcdn.cn/upload_files/2016/12/30/Fpfthm6gKtnHgrEuHvYNVt0qlaXm.jpg',
 							price: '5.00',
 							unit: '斤',
 						},
 						{
 							goodId: 2,
 							title: '珍珠黄玉米头玉米粒  杂粮粥长寿粥珍珠黄玉米头玉米粒',
-							uri: 'https://img.yzcdn.cn/upload_files/2016/12/30/FufzM760_r2j8iiSHC9irUlvQIN5.jpg?imageView2/2/w/280/h/280/q/75/format/webp',
+							uri: 'https://img.yzcdn.cn/upload_files/2016/12/30/FufzM760_r2j8iiSHC9irUlvQIN5.jpg',
 							price: '5.00',
 							unit: '斤',
 						},
 						{
 							goodId: 3,
 							title: '农家自产土糯米，6块一斤',
-							uri: 'https://img.yzcdn.cn/upload_files/2016/12/31/Fr-_lyQemNUO51P5nWn6Eh4wm4Bf.jpg?imageView2/2/w/280/h/280/q/75/format/webp',
+							uri: 'https://img.yzcdn.cn/upload_files/2016/12/31/Fr-_lyQemNUO51P5nWn6Eh4wm4Bf.jpg',
 							price: '5.00',
 							unit: '斤',
 						},
 						{
 							goodId: 4,
 							title: '黑米，10块一斤',
-							uri: 'https://img.yzcdn.cn/upload_files/2016/12/31/FjrPeB6eV_QOx3XXUOOjJQtviRO3.jpg?imageView2/2/w/280/h/280/q/75/format/webp',
+							uri: 'https://img.yzcdn.cn/upload_files/2016/12/31/FjrPeB6eV_QOx3XXUOOjJQtviRO3.jpg',
 							price: '5.00',
 							unit: '斤',
 						},
 						{
 							goodId: 5,
 							title: '农家自产香米，3.5块一斤',
-							uri: 'https://img.yzcdn.cn/upload_files/2016/12/31/FrF6i57VEX9f3BB63GGGxBkozly8.jpg?imageView2/2/w/280/h/280/q/75/format/webp',
+							uri: 'https://img.yzcdn.cn/upload_files/2016/12/31/FrF6i57VEX9f3BB63GGGxBkozly8.jpg',
 							price: '3.50',
 							unit: '斤',
 						},
@@ -83,14 +83,14 @@ export default class HomePage extends Component {
 						{
 							goodId: 6,
 							title: '珍珠黄玉米头玉米粒  杂粮粥长寿粥珍珠黄玉米头玉米粒',
-							uri: 'https://img.yzcdn.cn/upload_files/2016/12/30/FueHbnSJTErGZ5izk0ucfdX4xOVz.jpg?imageView2/2/w/280/h/280/q/75/format/webp',
+							uri: 'https://img.yzcdn.cn/upload_files/2016/12/30/FueHbnSJTErGZ5izk0ucfdX4xOVz.jpg',
 							price: '5.00',
 							unit: '斤',
 						},
 						{
 							goodId: 7,
 							title: '土鸭蛋，',
-							uri: 'https://img.yzcdn.cn/upload_files/2016/12/31/FgTe69wfTC6x4dC_8rNcbUzcp-FB.jpg?imageView2/2/w/280/h/280/q/75/format/webp',
+							uri: 'https://img.yzcdn.cn/upload_files/2016/12/31/FgTe69wfTC6x4dC_8rNcbUzcp-FB.jpg',
 							price: '5.00',
 							unit: '斤',
 						},
@@ -105,7 +105,7 @@ export default class HomePage extends Component {
 		});
 		
 		let goodsCategorys = this.state.sortData.map((item, index) => {
-			return <GoodsCategory data={item} key={index}/>
+			return <GoodsCategory {...this.props} data={item} key={index}/>
 		})
 		return (
 			<ScrollView>
@@ -130,8 +130,8 @@ export default class HomePage extends Component {
 						
 					}}
 				>
-					<Image source={{uri: 'https://img.yzcdn.cn/upload_files/2016/12/31/Fjit7HpTz6w3mzCGel-pd0skatuX.jpg?imageView2/2/w/730/h/0/q/75/format/webp'}} style={homeStyles.goodsRecommend} />
-					<Image source={{uri: 'https://img.yzcdn.cn/upload_files/2016/12/31/Fjit7HpTz6w3mzCGel-pd0skatuX.jpg?imageView2/2/w/730/h/0/q/75/format/webp'}} style={homeStyles.goodsRecommend} />
+					<Image source={{uri: 'https://img.yzcdn.cn/upload_files/2016/12/31/Fjit7HpTz6w3mzCGel-pd0skatuX.jpg'}} style={homeStyles.goodsRecommend} />
+					<Image source={{uri: 'https://img.yzcdn.cn/upload_files/2016/12/31/Fjit7HpTz6w3mzCGel-pd0skatuX.jpg'}} style={homeStyles.goodsRecommend} />
 			    </Swiper>
 			    
 			    {goodsCategorys}
@@ -169,6 +169,6 @@ const homeStyles = StyleSheet.create({
 		width: recommendWidth,
 	},
 	recommendBanner: {
-		marginTop: 10,
+		marginTop: 0,
 	}
 });

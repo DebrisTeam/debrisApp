@@ -3,15 +3,24 @@ import { StackNavigator } from 'react-navigation';
 import MainPage from './MainPage';
 // 用户资料部分
 import AccountInfo from './account/AccountInfo';
+
 import UserName from  './account/UserName';
 // 收货地址
 import AddressList from './me/address/AddressList';
 import PickerTest from './me/address/PickerTest';
 
-import OrderListPage from './me/OrderListPage'
+import OrderListPage from './me/OrderListPage';
+import Login from './login/Login';
+import Register from './login/Register';
+import ResetPassword from './login/ResetPassword';
+
 
 const App = StackNavigator({
 	MainPage: { screen: MainPage },
+	Login: { screen: Login },
+	Register: { screen: Register },
+	Reset: { screen: ResetPassword },
+	
 	AccountInfo: { screen: AccountInfo },
     UserName: {
 	    screen: UserName,
@@ -41,14 +50,17 @@ const App = StackNavigator({
 			style: {
 				height: 52,
 				borderWidth: 0,
-				backgroundColor: 'rgba(71,157,103,1)'
 			},
-			titleStyle: {fontWeight: 'normal',color: '#fff'},
-			tintColor: '#fff',
-			cardStack: {}
+			titleStyle: {
+				fontWeight: 'normal',
+				//fontSize: 16,
+			},
+			tintColor: '#333',
+			cardStack: {},
+			backTitle: null,
+
 		},
 	},
 });
-
 
 module.exports = App;

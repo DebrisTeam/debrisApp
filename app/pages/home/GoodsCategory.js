@@ -6,6 +6,7 @@ import {
 	ScrollView,
 	StyleSheet,
 	Dimensions,
+	TouchableOpacity,
 } from 'react-native';
 
 export default class GoodsCategory extends Component {
@@ -15,24 +16,26 @@ export default class GoodsCategory extends Component {
 	}
 	
 	render() {
-		let { data } = this.props;
+		let { data, navigation } = this.props;
 		let randerItem = data.goods.map((item, index) => {
 			return (
-				<View style={sortStyles.sortGoodsItem} key={index}>
-					<Image source={{uri: item.uri}} style={sortStyles.thumb}/>
-					<View style={sortStyles.itemTextContainer}>
-						<Text 
-							numberOfLines={2}
-							style={sortStyles.itemTitle}>{ item.title }</Text>
-						<Text style={sortStyles.itemPrice}>￥{ item.price }/<Text style={{fontSize: 10}}>{ item.unit }</Text></Text>
+				<TouchableOpacity  key={index} onPress={() => navigation.navigate('Login')}>
+					<View style={sortStyles.sortGoodsItem}>
+						<Image source={{uri: item.uri}} style={sortStyles.thumb}/>
+						<View style={sortStyles.itemTextContainer}>
+							<Text 
+								numberOfLines={2}
+								style={sortStyles.itemTitle}>{ item.title }</Text>
+							<Text style={sortStyles.itemPrice}>￥{ item.price }/<Text style={{fontSize: 10}}>{ item.unit }</Text></Text>
+						</View>
 					</View>
-				</View>
+				</TouchableOpacity>
 			);
 		});
 		return (
 			<View style={sortStyles.container}>
-				<Text style={sortStyles.sortTitle}>生鲜系列</Text>
-				<Text style={sortStyles.sortDer}>生态/健康/美味</Text>
+				<Text style={sortStyles.sortTitle}>{data.title}</Text>
+				<Text style={sortStyles.sortDer}>{data.subTitle}</Text>
 				<ScrollView
 					horizontal={true}
 					pagingEnabled={false}
@@ -79,9 +82,10 @@ const sortStyles = StyleSheet.create({
 		width: sortGoodsItemWidth
 	},
 	itemTitle: {
+		marginTop: 3,
 		height: 40,
 		fontSize: 12,
-		lineHeight: 20,
+		lineHeight: 16,
 		color: '#333'
 	},
 	itemPrice: {
