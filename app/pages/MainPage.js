@@ -7,8 +7,10 @@ import {
 } from 'react-native';
 
 import TabNavigator from "react-native-tab-navigator";
-import ClassIfyPage from './classIfy/ClassIfyPage'
+import HomePage from './home/HomePage';
 import CartPage from './cart/CartPage';
+import MinePage from './mine/MinePage';
+import ClassIfyPage from './classIfy/ClassIfyPage'
 import MeFragment from './me/MeFragment'
 
 export default class MainPage extends Component {
@@ -49,7 +51,7 @@ export default class MainPage extends Component {
 						renderIcon={() => <Image source={require('../images/icon-home.png')} style={styles.icon}/>}
 						renderSelectedIcon={() => <Image source={require('../images/icon-home-active.png')} style={styles.icon}/>}
 					>
-						<Text>hi enjing</Text>
+						<HomePage {...this.props}/>
 					</TabNavigator.Item>
 					
 					<TabNavigator.Item
@@ -85,7 +87,7 @@ export default class MainPage extends Component {
 						renderIcon={() => <Image source={require('../images/icon-my.png')} style={styles.icon}/>}
 						renderSelectedIcon={() => <Image source={require('../images/icon-my-active.png')} style={styles.icon}/>}
 					>
-						 {<MeFragment navigate={navigate}/>}
+						{<MeFragment navigate={navigate}/>}
 					</TabNavigator.Item>
 				</TabNavigator>
 			</View>
@@ -130,6 +132,6 @@ const styles = StyleSheet.create({
 		color: '#333',
 	},
 	selectedTitleStyle: {
-		color: '#23bb08'
+		color: 'rgba(71,157,103,1)'
 	}
 })

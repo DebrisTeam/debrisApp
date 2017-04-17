@@ -2,11 +2,20 @@
  * Created by wangdi on 16/11/16.
  */
 import React, {Component, PropTypes} from 'react';
-import {StyleSheet, View, Text, ScrollView, TouchableNativeFeedback, TouchableOpacity, Platform, PixelRatio} from 'react-native';
+import {
+    StyleSheet,
+    View,
+    Text,
+    ScrollView,
+    TouchableNativeFeedback,
+    TouchableOpacity,
+    Platform,
+    PixelRatio,
+    Image
+} from 'react-native';
 import px2dp from '../../utils/px2dp';
 import theme from '../../style/theme';
 import Avatar from '../../components/Avatar';
-import OrderListPage from './OrderListPage'
 
 export default class SettingPage extends Component{
     constructor(props){
@@ -38,11 +47,11 @@ export default class SettingPage extends Component{
      _onPressCallback(position){
        switch(position){
            case 0:  //title
-               this.props.navigate('Order');
+               this.props.navigate('AccountInfo');
                break;
 
            case 1:  // add occupation
-               this._alert();
+               this.props.navigate('Order');
                break;
 
            case 2:  //collection
@@ -52,21 +61,6 @@ export default class SettingPage extends Component{
            case 3:  //read articles
                this._alert();
                break;
-
-           case 4:  //tags
-               this._alert();
-               break;
-
-           case 5:  //rank
-               this._alert();
-               break;
-
-           case 6: {  //setting
-               this.props.navigator.push({
-                   component: IndividualPage
-               });
-               break;
-           }
        }
     }
 
@@ -74,14 +68,17 @@ export default class SettingPage extends Component{
         return(
             <View style={{flex: 1, backgroundColor: theme.pageBackgroundColor}}>
                 <ScrollView>
-                    <View style={styles.avatar}>
-                        <View style={styles.avatarImg}>
-                             <Avatar image={require('../../images/icon-cart.png')}  size={px2dp(70)} textSize={px2dp(20)}/>
+                    <TouchableOpacity activeOpacity={0.8} onPress={this._onPressCallback.bind(this, 0)}>
+                        <View style={styles.header}>
+                            <Image
+							style={styles.avatarImg}
+							source={{uri: 'http://a-ssl.duitang.com/uploads/item/201611/23/20161123180252_i2MzZ.jpeg'}}
+						/>
+                            <Text style={styles.userName}>认识我吗?</Text>
                         </View>
-                        <Text style={{marginBottom:px2dp(20)}}>183778845622</Text>
-                    </View>
+                    </TouchableOpacity>
                     <View style={styles.list}>
-                        <Item text="我的订单" subText="0" onPress={this._onPressCallback.bind(this, 0)}/>
+                        <Item text="我的订单" subText="0" onPress={this._onPressCallback.bind(this, 1)}/>
                         <View style={styles.orderClass}>
                         {this.state.tabNames.map((item, i) => {
                             return(
@@ -108,9 +105,6 @@ export default class SettingPage extends Component{
 class Item extends Component{
     constructor(props){
         super(props);
-        this.state = {
-            switchIsOn: this.props.switcherValue
-        };
     }
 
     static propTypes = {
@@ -175,16 +169,22 @@ class OrderClass extends Component{
 }
 
 const styles = StyleSheet.create({
-    avatar:{
-        alignItems:"center",
-        backgroundColor:'#fff',
-        justifyContent:'center'
-    },
+    header: {
+		alignItems: 'center',
+		justifyContent: 'center',
+		height: 160,
+		backgroundColor: '#fff',
+	},
     avatarImg:{
-        marginTop:px2dp(20),
-        marginBottom:px2dp(15),
-
+        width: 60,
+		height: 60,
+		borderRadius: 30,
     },
+    userName: {
+		marginTop: 10,
+		color: '#333',
+		fontSize: 14,
+	},
     list:{
         borderTopWidth: 1/PixelRatio.get(),
         borderTopColor: '#e4e4e4',
