@@ -9,7 +9,7 @@ import {
 	ScrollView,
 } from 'react-native';
 
-import { FormLabel, FormInput,FormValidationMessage, Button } from 'react-native-elements';
+import { Button } from 'react-native-elements';
 import {appTheme, themeColor}  from '../../baseStyles/appTheme';
 import themeBorder from '../../baseStyles/border';
 import loginStyles from '../../style/loginStyles';
@@ -58,7 +58,7 @@ export default class Login extends Component {
 						/>
 					</View>
 					<View style={loginStyles.bottomInfoNav}>
-						<TouchableOpacity>
+						<TouchableOpacity onPress={() => navigate('Reset')}>
 							<Text>忘记密码</Text>
 						</TouchableOpacity>
 						<TouchableOpacity onPress={() => navigate('Register')}>

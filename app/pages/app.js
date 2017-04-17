@@ -5,11 +5,14 @@ import AccountInfo from './account/AccountInfo';
 import OrderListPage from './me/OrderListPage';
 import Login from './login/Login';
 import Register from './login/Register';
+import ResetPassword from './login/ResetPassword';
 
 const App = StackNavigator({
 	MainPage: { screen: MainPage },
 	Login: { screen: Login },
 	Register: { screen: Register },
+	Reset: { screen: ResetPassword },
+	
 	AccountInfo: { screen: AccountInfo },
 	Chat: {
         screen: OrderListPage,

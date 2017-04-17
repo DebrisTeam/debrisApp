@@ -9,7 +9,7 @@ import {
 	ScrollView,
 } from 'react-native';
 
-import { FormLabel, FormInput,FormValidationMessage, Button } from 'react-native-elements';
+import { Button } from 'react-native-elements';
 import {appTheme, themeColor}  from '../../baseStyles/appTheme';
 import themeBorder from '../../baseStyles/border';
 import loginStyles from '../../style/loginStyles';
@@ -55,6 +55,7 @@ export default class Login extends Component {
 							buttonStyle={loginStyles.getCodeBtn}
 							title="获取验证码"
 							fontSize={10}
+							backgroundColor={themeColor()}
 						/>
 					</View>
 					<View style={[loginStyles.formItem,themeBorder.borderBottom()]}>
