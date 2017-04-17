@@ -61,6 +61,7 @@ export default class Login extends Component {
 						<Text style={loginStyles.itemLabel}>密码</Text>
 						<TextInput
 							style={loginStyles.itemInput}
+							underlineColorAndroid="transparent"
 							placeholder='请设置登陆密码'
 							placeholderTextColor="rgb(202,202,207)"
 							secureTextEntry={true}

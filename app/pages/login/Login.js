@@ -17,7 +17,6 @@ import loginStyles from '../../style/loginStyles';
 export default class Login extends Component {
 	static navigationOptions = {
 		title: '登陆',
-		
 	}
 	render() {
 		const { navigate } = this.props.navigation;
@@ -45,6 +44,7 @@ export default class Login extends Component {
 							<Text style={loginStyles.itemLabel}>密码</Text>
 							<TextInput
 								style={loginStyles.itemInput}
+								underlineColorAndroid="transparent"
 								placeholder='请输入登陆密码'
 								placeholderTextColor="rgb(202,202,207)"
 								secureTextEntry={true}
@@ -66,8 +66,13 @@ export default class Login extends Component {
 						</TouchableOpacity>
 					</View>
 					<View style={loginStyles.otherLogin}>
-						<Text style={{marginBottom: 15}}>你也可以用一下方式登陆</Text>
+						<View style={{flexDirection: 'row',alignItems: 'center',marginBottom: 15,}}>
+							<Text style={loginStyles.line}/>
+							<Text style={{marginHorizontal: 10}}>第三方登陆</Text>
+							<Text style={loginStyles.line}/>
+						</View>
 						<Image source={require('../../images/weixin.png')} style={{width: 40,height: 40}} />
+						<Text style={{marginTop: 5, fontSize: 12}}>微信</Text>
 					</View>
 				</ScrollView>
 			</View>

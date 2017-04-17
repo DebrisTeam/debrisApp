@@ -15,7 +15,6 @@ const App = StackNavigator({
         screen: OrderListPage,
         navigationOptions:{
             title: '我的订单',
-            headerBackTitle:null
         },
     },
 },{
@@ -24,11 +23,14 @@ const App = StackNavigator({
 			style: {
 				height: 52,
 				borderWidth: 0,
-				backgroundColor: 'rgba(71,157,103,1)'
 			},
-			titleStyle: {fontWeight: 'normal',color: '#fff'},
-			tintColor: '#fff',
-			cardStack: {}
+			titleStyle: {
+				fontWeight: 'normal',
+				//fontSize: 16,
+			},
+			tintColor: '#333',
+			cardStack: {},
+			backTitle: null,
 		},
 	},
 });

@@ -38,7 +38,13 @@ export default loginStyles = {
 		borderRadius: 13,
 	},
 	otherLogin: {
+		paddingHorizontal: 50,
 		alignItems: 'center',
 		marginTop: 30,
+	},
+	line: {
+		flex: 1,
+		height: 1,
+		backgroundColor: '#aaa'
 	}
 }
